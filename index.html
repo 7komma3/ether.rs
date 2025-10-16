@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ETHER.RS — Domain For Sale</title>
+  <meta name="description" content="ETHER.RS — premium .rs domain for crypto, Rust, and web3 brands. Make an offer or contact the owner." />
+  <meta property="og:title" content="ETHER.RS — Domain For Sale" />
+  <meta property="og:description" content="Premium short domain for Rust, Ethereum, and web3 branding. Make an offer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta name="theme-color" content="#00ff95" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080a0b'/%3E%3Ctext x='32' y='42' font-size='28' text-anchor='middle' fill='%2300ff95' font-family='monospace'%3E%26lt;%2F%26gt;%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root{
+      --bg:#080a0b;          /* deep black */
+      --fg:#e6ffe6;          /* faint green white */
+      --muted:#8abf9b;       /* soft green */
+      --accent:#00ff95;      /* matrix neon */
+      --accent-2:#73ffc9;    /* pale neon */
+      --ring:0 0 0 1px rgba(0,255,149,.4) inset, 0 0 40px rgba(0,255,149,.12);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: var(--bg); color: var(--fg);}
+    a{ color: var(--accent-2); text-decoration: none; }
+
+    /* Canvas background */
+    #matrix{ position: fixed; inset: 0; z-index: -2; background: radial-gradient(80vmax 80vmax at 50% -20%, rgba(0,255,149,.08), transparent 60%), linear-gradient(#050606, #080a0b); }
+    .veil{ position: fixed; inset: 0; z-index: -1; backdrop-filter: blur(.5px); background: linear-gradient(180deg, rgba(0,255,149,.05), rgba(0,255,149,.0)); }
+
+    .wrap{ max-width: 980px; margin: 0 auto; padding: clamp(24px, 4vw, 48px); }
+
+    header{ display:flex; align-items:center; justify-content:space-between; gap:24px; margin-top: 6px; }
+    .brand{ display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--fg); }
+    .logo{ width:44px; height:44px; border-radius:12px; display:grid; place-items:center; background: linear-gradient(145deg, rgba(0,255,149,.16), rgba(0,255,149,.04)); box-shadow: 0 0 0 1px rgba(0,255,149,.35) inset, 0 6px 30px rgba(0,255,149,.10); }
+    .logo::before{ content:"<>"; font-weight:700; letter-spacing:1px; color:var(--accent-2); text-shadow:0 0 10px rgba(0,255,149,.6); }
+    .title{ font-size: clamp(28px, 4.4vw, 40px); font-weight:800; letter-spacing:.2px; }
+    .title .dot{ color: var(--accent); text-shadow: 0 0 16px rgba(0,255,149,.6); }
+
+    main{ margin-top: clamp(24px, 5vw, 56px); }
+
+    .hero{
+      border-radius: 20px; background: linear-gradient(180deg, rgba(0,255,149,.06), rgba(0,255,149,.0)), #0a0f0c; padding: clamp(22px, 4.4vw, 42px);
+      box-shadow: var(--ring), 0 30px 60px -30px rgba(0,0,0,.6); position:relative; overflow:hidden;
+    }
+    .hero h1{ font-size: clamp(32px, 6vw, 64px); margin:0 0 6px; line-height:1.02; }
+    .tagline{ color: var(--accent-2); margin: 0 0 16px; text-shadow: 0 0 16px rgba(0,255,149,.3); font-size: clamp(16px, 2.6vw, 22px); }
+    .lead{ color: var(--muted); font-size: clamp(14px, 2.2vw, 18px); max-width: 65ch; }
+
+    .grid{ display:grid; grid-template-columns: 1fr; gap:18px; margin-top: 20px; }
+    @media (min-width: 860px){ .grid{ grid-template-columns: 1.2fr .8fr; } }
+
+    .panel{ border-radius: 14px; border:1px solid rgba(0,255,149,.18); background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); padding: 16px; box-shadow: 0 0 0 1px rgba(0,255,149,.18) inset; }
+    .panel h3{ margin: 0 0 10px; font-size: 16px; color: var(--accent-2); }
+    .list{ list-style:none; padding:0; margin:0; display:grid; gap:10px; }
+    .list li{ display:flex; gap:10px; align-items:flex-start; }
+    .list li::before{ content:"▹"; color:var(--accent); font-weight:700; margin-top:1px; }
+
+    .matrix{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:10px; }
+    .kv{ border:1px solid rgba(0,255,149,.18); border-radius:10px; padding:10px 12px; background: #0a120e; box-shadow: 0 0 0 1px rgba(0,255,149,.06) inset; }
+    .kv .k{ color: var(--muted); font-size: 12px; letter-spacing:.3px; text-transform: uppercase; }
+    .kv .v{ font-weight:700; margin-top:4px; }
+
+    .cta{ margin-top: 18px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn{ --b:rgba(0,255,149,.35); --g:rgba(0,255,149,.16); appearance:none; border:none; cursor:pointer; color:var(--fg); text-decoration:none; font-weight:800; background: linear-gradient(145deg, var(--g), rgba(255,255,255,.03)); border-radius: 14px; padding: 12px 16px; box-shadow: 0 0 0 1px var(--b) inset, 0 12px 35px -20px rgba(0,255,149,.35); transition: transform .24s ease, box-shadow .24s ease, background .24s ease; }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 0 0 1px rgba(0,255,149,.55) inset, 0 20px 50px -20px rgba(0,255,149,.55); }
+
+    /* form */
+    form{ display:grid; gap:12px; }
+    label{ font-size: 12px; color: var(--muted); letter-spacing:.3px; text-transform: uppercase; }
+    input, textarea{ width:100%; color:var(--fg); background:#0a120e; border:1px solid rgba(0,255,149,.22); border-radius:10px; padding:12px 12px; font-family:inherit; font-size:14px; box-shadow: 0 0 0 1px rgba(0,255,149,.06) inset; }
+    input:focus, textarea:focus{ outline:none; box-shadow: 0 0 0 2px rgba(0,255,149,.45), 0 0 0 1px rgba(0,255,149,.45) inset; }
+    textarea{ min-height: 110px; resize: vertical; }
+
+    footer{ color: var(--muted); font-size: 12.5px; margin: 30px 0 10px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  </style>
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="veil" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#" aria-label="ETHER.RS home">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">ETHER<span class="dot">.RS</span></div>
+      </a>
+      <nav aria-label="Primary">
+        <a class="btn" href="mailto:admin@ether.rs?subject=ETHER.RS%20Domain%20Inquiry">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="headline">
+        <p class="tagline">Premium short domain · Crypto · Rust · Web3</p>
+        <h1 id="headline">ETHER.RS is for sale</h1>
+        <p class="lead">Own a two-word brand that reads like <strong>Ether + .rs</strong> → <em>Rust</em>, <em>Research</em>, <em>Registry</em>. Perfect for Ethereum tools, Rust‑native stacks, identity registries, or web3 infra.</p>
+
+        <div class="grid">
+          <div class="panel">
+            <h3>Highlights</h3>
+            <ul class="list">
+              <li>Short, memorable, dev‑friendly</li>
+              <li>Crypto semantics (<em>Ether</em>) + Rust angle (<em>.rs</em>)</li>
+              <li>Great for products, docs, or OSS hubs</li>
+              <li>Clean trademark‑agnostic dictionary word</li>
+              <li>Instant authority for Rust/EVM tooling</li>
+            </ul>
+
+            <div class="matrix" style="margin-top:12px">
+              <div class="kv"><div class="k">Extension</div><div class="v">.rs (Serbia)</div></div>
+              <div class="kv"><div class="k">Length</div><div class="v">7 chars</div></div>
+              <div class="kv"><div class="k">Transfer</div><div class="v">Standard push / EPP</div></div>
+              <div class="kv"><div class="k">Use cases</div><div class="v">Docs · Registry · SDK</div></div>
+            </div>
+
+            <div class="cta">
+              <a class="btn" href="#offer">Make an offer</a>
+              <a class="btn" href="mailto:admin@ether.rs?subject=ETHER.RS%20Buy%20Now&body=I%20am%20interested%20in%20purchasing%20ETHER.RS.%20Please%20share%20terms.">Buy Now (contact)</a>
+            </div>
+          </div>
+
+          <div id="offer" class="panel" aria-labelledby="offer-head">
+            <h3 id="offer-head">Send an Offer</h3>
+            <form method="POST" action="mailto:admin@ether.rs?subject=ETHER.RS%20Domain%20Inquiry" enctype="text/plain">
+              <div>
+                <label for="name">Your name</label>
+                <input id="name" name="name" required placeholder="Satoshi" />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+              <div>
+                <label for="offer">Offer (USD)</label>
+                <input id="offer" name="offer" type="number" min="1" step="1" placeholder="e.g. 5000" />
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="I want ETHER.RS for a Rust/Ethereum SDK…"></textarea>
+              </div>
+              <div class="cta">
+                <button class="btn" type="submit">Send</button>
+                <a class="btn" href="mailto:admin@ether.rs?subject=ETHER.RS%20Domain%20Inquiry">Email instead</a>
+              </div>
+              <p class="lead" style="margin:4px 0 0; font-size:12px">By submitting, you agree to be contacted regarding this domain.</p>
+            </form>
+          </div>
+        </div>
+
+        <footer>
+          <span>Questions? <a href="mailto:admin@ether.rs?subject=ETHER.RS%20Domain%20Inquiry">admin@ether.rs</a></span>
+          <span>© <script>document.write(new Date().getFullYear())</script> ETHER.RS</span>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Lightweight Matrix rain effect
+    const c = document.getElementById('matrix');
+    const ctx = c.getContext('2d');
+    function resize(){ c.width = window.innerWidth; c.height = window.innerHeight; }
+    resize(); window.addEventListener('resize', resize);
+
+    const glyphs = 'アカサタナハマヤラワ0123456789ETHERS';
+    let columns = Math.floor(c.width / 16);
+    let drops = new Array(columns).fill(1);
+
+    function draw(){
+      ctx.fillStyle = 'rgba(8,10,11,0.08)';
+      ctx.fillRect(0,0,c.width,c.height);
+      ctx.fillStyle = '#00ff95';
+      ctx.shadowColor = '#00ff95';
+      ctx.shadowBlur = 8;
+      ctx.font = '16px monospace';
+
+      for(let i=0; i<drops.length; i++){
+        const text = glyphs.charAt(Math.floor(Math.random()*glyphs.length));
+        ctx.fillText(text, i*16, drops[i]*16);
+        if(drops[i]*16 > c.height && Math.random() > 0.975){ drops[i] = 0; }
+        drops[i]++;
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+  </script>
+</body>
+</html>
